@@ -1,0 +1,187 @@
+{% load static %}
+<html lang="">
+<head>
+<title>Ecommerce</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'homepagefile/layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+
+  <style>
+    .abcd
+    {
+    height:90%;
+    background-position:center;
+    background-repeat:no repeat;
+    background-size:cover;
+    }
+    .topbg
+    {
+    height:20%;
+    background-position:top;
+    background-repeat:no repeat;
+    background-size:cover;
+    }
+
+
+.dropbtn {
+  background-color: green;
+  color: black;
+  padding: 3px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-family: Calibre;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left:80px;
+  padding-top:24px;
+  padding-bottom:2px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: calibre;
+
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: orange;
+}
+.detail
+{
+padding-right:100px;
+padding-left:300px;
+text-align:center;
+text-align:justify;
+padding-right:370px;
+padding-left:300px;
+}
+  </style>
+</head>
+<body id="top">
+
+<!-- Top Background Image Wrapper -->
+
+<div class="topbg" style="background-image:url('{% static 'homepagefile/images/demo/backgrounds/bg 4.jpg' %}');">
+
+  <div class="wrapper row0" style="padding-top:2px padding-bottom:8px;">
+    <div id="topbar" class="hoc clear">
+      <div class="fl_left">
+        <ul class="nospace">
+          <li><i class="fas fa-phone rgtspace-5"></i> +91 9123455679</li>
+          <li><i class="far fa-envelope rgtspace-5"></i> info@ecommerce.com</li>
+        </ul>
+      </div>
+      <div class="fl_right">
+<!--        <ul class="nospace">-->
+<!--          <li><a href="/" title="Home"><i class="fas fa-home"></i></a></li>-->
+<!--          <li><a href="#" title="Help Centre"><i class="far fa-life-ring"></i></a></li>-->
+<!--          <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>-->
+<!--          <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li>-->
+<!--           <li id="searchform">-->
+<!--            <div>-->
+<!--              <form action="#" method="post">-->
+<!--                <fieldset>-->
+<!--                  <legend>Quick Search:</legend>-->
+<!--                  <input type="text" placeholder="Enter search term">-->
+<!--                  <button type="submit"><i class="fas fa-search"></i></button>-->
+<!--                </fieldset>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--        </ul>-->
+
+      <div class="center" style="background-color:white;padding-left:20px;padding-right:20px;">
+        <ul class="nospace" style="padding-bottom:5px">
+          <li id="searchform" style="color:orange;font-size:12px;padding-top:6px;">
+            <div>
+              <form action="{% url 'searches' %}" method="get">
+                <fieldset>
+                  <legend>Quick Search:</legend>
+                  <button type="submit" style="background-color:orange">
+                    <i class="fas fa-search"></i>
+                    </button>
+                  <input type="text" placeholder="Search ..." name='search_item' style="background-color:black">
+                </fieldset>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear" style="padding-top:12px padding-bottom:32px;">
+      <div id="logo" class="fl_left">
+        <h1><a href="/">AVODHA SHOPPING</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+<!--          <li><a class="drop" href="#">Pages</a>-->
+<!--            <ul>-->
+<!--              <li><a href="{% static 'homepagefile/pages/gallery.html' %}">Gallery</a></li>-->
+<!--              <li><a href="{% static 'homepagefile/pages/full-width.html' %}">Full Width</a></li>-->
+<!--              <li><a href="{% static 'homepagefile/pages/sidebar-left.html' %}">Sidebar Left</a></li>-->
+<!--              <li><a href="{% static 'homepagefile/pages/sidebar-right.html' %}">Sidebar Right</a></li>-->
+<!--              <li><a href="{% static 'homepagefile/pages/basic-grid.html' %}">Basic Grid</a></li>-->
+<!--              <li><a href="{% static 'homepagefile/pages/font-icons.html' %}">Font Icons</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li><a class="drop" href="#">Dropdown</a>-->
+<!--            <ul>-->
+<!--              <li><a href="#">Level 2</a></li>-->
+<!--              <li><a class="drop" href="#">Level 2 + Drop</a>-->
+<!--                <ul>-->
+<!--                  <li><a href="#">Level 3</a></li>-->
+<!--                  <li><a href="#">Level 3</a></li>-->
+<!--                  <li><a href="#">Level 3</a></li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--              <li><a href="#">Level 2</a></li>-->
+<!--            </ul>-->
+          </li>
+          <li class="active"><a href="{% url 'cartdetailss' %}">Cart <span style="color:yellow";>({{ic}})</span></a></li>
+          <li class="active"><a href="#">Logout</a></li>
+          <li class="active"><a href="#">Login</a></li>
+          <li class="active"><a href="#">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

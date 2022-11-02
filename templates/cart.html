@@ -1,0 +1,112 @@
+{% extends 'homepagebase.html' %}
+{% block content %}
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="{% static 'cartfile/style.css' %}" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <meta name="robots" content="noindex,follow" />
+  </head>
+  <body>
+
+    <div class="shopping-cart">
+        <!-- Title -->
+           <div class="title">
+             <h3 style="font-family:Times NewRoman;text-align:center;"><b>YOUR CART
+                 <i class='fas fa-shopping-cart' style="padding-left:500px;">({{ic}})</i></b></h3>
+
+           </div>
+        <!-- Product #1 -->
+            {% for i in ci %}
+
+      <div class="item">
+
+<!--          <div class="buttons">-->
+<!--          <a href="{% url 'deltocart' i.product_cart.id %}"><span class="delete-btn"></span></a>-->
+<!--          <span class="like-btn"></span>-->
+<!--          </div>-->
+          <div class="buttons">
+              <a href="{% url 'deltocart' i.product_cart.id %}"><span><i class="fa fa-trash" style="padding-top:2px;"></i></span></a>
+              <span class="like-btn"></span>
+        </div>
+
+
+        <div class="image" style="padding-top:15px;">
+          <a href="{{i.product_cart.get_url}}"><img src="{{i.product_cart.img.url}}" alt="{{i.product_cart.name}}"
+                                                    style="width:120px;height:90px;"/></a>
+            <!--<img src="{% static 'cartfile/item-1.png' %}" alt="" />-->
+        </div>
+
+        <div class="description">
+          <span><a href="{{i.product_cart.get_url}}">{{i.product_cart.name}}</a></span>
+         <span>ID: {{i.product_cart.id}}</span>
+            <span>Price: {{i.product_cart.price}} Rs x 1</span>
+            <span>Quantity: {{i.quantity_cart}}</span>
+            <span>Stock Left: {{i.left}}</span>
+
+        </div>
+
+<!--        <div class="quantity" style="padding-top:16px;padding-down:16px;padding-left:60px;">-->
+<!--          <button class="plus-btn" type="button" name="button">-->
+<!--            <a href="{% url 'addtocart' i.product_cart.id %}"><img src="{% static 'cartfile/plus.svg' %}"-->
+<!--                                                                   alt="" style="height:8px;width:10px;" /></a>-->
+<!--          </button>-->
+<!--          <input type="text" name="name" value="{{i.quantity_cart}}">-->
+<!--          <button class="minus-btn" type="button" name="button">-->
+<!--             <a href="{% url 'minustocart' i.product_cart.id %}"><img src="{% static 'cartfile/minus.svg' %}"-->
+<!--                                                                     alt="" style="height:8px;width:6px;padding-down:30px;" /></a>-->
+<!--          </button>-->
+<!--        </div>-->
+
+          <div class="quantity" style="padding-top:30px;padding-down:16px;padding-left:80px;">
+             <a href="{% url 'addtocart' i.product_cart.id %}"><i class="fa fa-plus" style="font-size:10px;padding-left:2px;"></i></a>
+             <input type="text" name="name" value="{{i.quantity_cart}}" style="padding-right:22px;padding-top:6px;">
+             <a href="{% url 'minustocart' i.product_cart.id %}"><i class="fa fa-minus" style="font-size:10px;padding-top:2px;padding-left:2px;"></i></a>
+          </div>
+
+<!--          <div class="total-price">{{i.product_cart.price}}/-</div>-->
+          <div class="total-price">{{i.totals}}/-</div>
+
+      </div>
+    {% endfor %}
+      <div class="totalprice" style="padding-right:92px;text-align:right;">
+        <h1 style="font-size:14px;font-family:Calibre;color:green;padding-left:2px;"><b>Total Price : {{tot}}/-</b></h1>
+        </div>
+    </div>
+  </body>
+</html>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

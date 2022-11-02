@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: lightblue;
+}
+.container {
+    padding: 50px 460px 30px 460px;
+    background-color: pink;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: white;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid red;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: Green;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form>
+  <div class="container">
+  <center><h1>Register Here!!</h1> </center>
+  <hr>
+<div>
+<label><b>Firstname</b></label>
+<input type="text" name="firstname" placeholder= "Firstname" size="15" required /><br>
+</div>
+<div>
+<label><b>Lastname</b></label>
+<input type="text" name="lastname" placeholder="Lastname" size="15"required /><br>
+</div>
+<div>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" name="email" required>
+</div>
+<div>
+<label for="username"><b>Username</b></label>
+<input type="text" name="username" placeholder="Enter Username"  required>
+</div>
+<div>
+<label for="password1"><b>Password</b></label>
+<input type="password" name="password1" placeholder="Enter Password"  required>
+</div>
+<div>
+<label for="Password2"><b>Confirm Password</b></label>
+<input type="password" name="Password2" placeholder="Confirm password"  required><br>
+</div>
+<div style="text-align:center;padding:20px 180px 12px;">
+<button type="submit" class="registerbtn">Register</button>
+</div>
+</form>
+</body>
+</html>
