@@ -1,7 +1,10 @@
 FOODVLOG PREOJECT
 
 This project mentioned about online food ordering system which is a web based application utilised for restaurant's business.
-It let's customer's to view the menu via filtering or searching options and select a food item ,drop into cart to place an order
+
+It let's customer's to view the menu via filtering or searching options and select a food item ,drop into cart to place an order.
+
+Database : Sqlite
 
 
 
@@ -26,10 +29,16 @@ CART PAGE
 
 ![2022-12-19 (7)](https://user-images.githubusercontent.com/117254338/208492902-a8ec4aa8-d3c1-4f56-a160-9ebcfca6631d.png)
 
+
 Start the Foodvlog project by following steps:
-Create your own virtual environment.
-Install your requirements.
-Set the database deafault by Sqlite  
-Make your migrations.
-Clone the repository. git clone https://github.com/Githubjosmy/Foodvlog
+
+1.Create your own virtual environment.
+
+2.Install your requirements.
+
+3.Set the database deafault by Sqlite
+
+4.Make your migrations.
+
+5.Clone the repository. git clone https://github.com/Githubjosmy/Foodvlog
 
