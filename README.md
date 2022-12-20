@@ -26,4 +26,3 @@ CART PAGE
 
 ![2022-12-19 (7)](https://user-images.githubusercontent.com/117254338/208492902-a8ec4aa8-d3c1-4f56-a160-9ebcfca6631d.png)
 
-START THE PROJECT BY FOLLOWING STEPS
