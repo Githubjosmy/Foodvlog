@@ -36,9 +36,11 @@ Start the Foodvlog project by following steps:
 
 2.Install your requirements.
 
-3.Set the database deafault by Sqlite
+3.Set the database default by Sqlite and made changes in settings according to the requirement of project
 
-4.Make your migrations.
+4.Create models and make your migrations.
 
-5.Clone the repository. git clone https://github.com/Githubjosmy/Foodvlog
+5. Create superuser for admin panel in terminal of the IDE and login in admin panel.
+
+6.Clone the repository. git clone https://github.com/Githubjosmy/Foodvlog
 
