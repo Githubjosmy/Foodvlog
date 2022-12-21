@@ -40,7 +40,7 @@ Start the Foodvlog project by following steps:
 
 4.Create models and make your migrations.
 
-5. Create superuser for admin panel in terminal of the IDE and login in admin panel.
+5.Create superuser for admin panel in terminal of the IDE and login in admin panel.
 
 6.Clone the repository. git clone https://github.com/Githubjosmy/Foodvlog
 
